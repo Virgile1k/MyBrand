@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'IBM Plex Sans Hebrew';
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(252, 252, 252);
+            padding: 40px;
+            box-shadow: 2px 2px 10px #333;
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            left: 500px;
+            top: 162px;
+
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: blue;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .login-btn,
+        .admin-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(39, 15, 253);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .admin-btn {
+            background-color: blue;
+            margin-top: 10px;
+            border-radius: 15px;
+        }
+
+        .up {
+            color: blue;
+        }
+    </style>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <nav>
+                <div class="virgile-word">
+                    <span class="vowel">V</span>
+                    <span class="consonant">i</span>
+                    <span class="vowel">r</span>
+                    <span class="consonant">g</span>
+                    <span class="consonant">i</span>
+                    <span class="vowel">l</span>
+                    <span class="consonant">e</span>
+                </div>
+                <div class="right-nav">
+                    <ul>
+                        <li><a href="Home.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="Skills.HTML">Skills</a></li>
+                        <li><a href="portifolio.html">Portifolio</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+        <div class="container">
+            <div class="title">Signup</div>
+            <label for="username" class="up">Username</label>
+            <input type="text" id="username" name="username">
+            <label for="username" class="up">Email</label>
+            <input type="text" id="Email" name="Email">
+            <label for="password" class="up">Password</label>
+            <input type="password" id="password" name="password">
+            <button class="admin-btn">Signup</button>
+        </div>
+        <footer class="fixedfooter">
+            &copy;VTECHNEWS 2023
+        </footer>
+    </body>
+
+</html>
