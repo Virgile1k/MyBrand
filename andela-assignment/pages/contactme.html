@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <style>
+        /* Add styles for the body */
+        body {
+            font-family: 'IBM Plex Sans Hebrew';
+            background-color: #f2f2f2;
+        }
+
+        /* Add styles for the header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Add styles for the form */
+        form {
+            background-color: white;
+            padding: 40px;
+            margin: auto;
+            width:500px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #ccc;
+        }
+
+        /* Add styles for the form inputs */
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 2px 2px 5px #ccc;
+        }
+
+        /* Add styles for the submit button */
+        input[type="submit"] {
+            background-color:blue;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        h1{
+            color:blue;
+        }
+
+
+        /* Add styles for the media query */
+        @media (max-width: 600px) {
+            form {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<nav>
+    <div class="left-side"><a href="Home.html">Virgile</a></div>
+    <div class="right-side">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="Skills.html">Skills</a>
+        <a href="portifolio.html">Portfolio</a>
+        <a href="Login.html">Login</a>
+    </div>
+</nav
+    <!-- Add header -->
+       
+
+    <!-- Add form -->
+    
+    <form action="" method="post">
+        <h1>Contact Me</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+    <footer class="fixedfooter">
+        &copy;VTECHNEWS 2023
+    </footer>
+</body>
+
+</html>
