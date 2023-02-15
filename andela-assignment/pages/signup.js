@@ -115,8 +115,8 @@ const validateInputs = () => {
 
     if (usernameValue && emailValue && passwordValue && password2Value) {
         return true;
-        // localStorage.setItem(usernameValue, emailValue, passwordValue);
-        // location.reload();
+         localStorage.setItem(usernameValue, emailValue, passwordValue);
+         location.reload();
       } else {
         return false;
       }}
