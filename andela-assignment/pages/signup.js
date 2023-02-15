@@ -9,7 +9,7 @@ let currentUser = null;
 
 //Getting already eisting users from the local storage
 const users = JSON.parse(localStorage.getItem("users")) ?? [];
-let isGenuine = localStorage.getItem("isGenuine", "true"); //Question = (more explanation on this code)...........
+let isGenuine = localStorage.getItem("isGenuine", "true"); 
 
 let id = users.length;
 
@@ -37,7 +37,7 @@ function addOfData(e) {
     localStorage.getItem("isGenuine", "true");
 
     if(users.id === 0 && users.username === "Ndayambaje" && users.email === "ndayambajevg16@gmail.com" && users.password === "planet@virus" && users.password2 === "planet@virus"){
-        // location.href = "../Admin-Panel/admin.html";
+         location.href = "../Admin-Panel/admin.html";
         location.reload();
     } else {
         location.href = "../Index/index.html#contact-me-page";
@@ -115,8 +115,8 @@ const validateInputs = () => {
 
     if (usernameValue && emailValue && passwordValue && password2Value) {
         return true;
-         localStorage.setItem(usernameValue, emailValue, passwordValue);
-         location.reload();
+         //localStorage.setItem(usernameValue, emailValue, passwordValue);
+         //location.reload();
       } else {
         return false;
       }}
