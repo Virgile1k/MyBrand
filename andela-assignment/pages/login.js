@@ -61,7 +61,3 @@ if (storedUser && storedUser.email === emailValue && storedUser.password === pas
     window.location.href = 'Admindashboard.html';
 }
 };
-
-
-
-
