@@ -1,4 +1,4 @@
-// Get the form element and add a submit event listener
+ // Get the form element and add a submit event listener
 const form = document.getElementById("contact-form");
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // prevent the default form submission behavior
