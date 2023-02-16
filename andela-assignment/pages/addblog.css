@@ -4,6 +4,7 @@ body {
 }
 
 .container {
+    top: 0px;
     display: flex;
     flex-direction: column;
     margin-left: 1;
@@ -134,8 +135,11 @@ a{
     text-decoration: none;
 }
 .add-post-title{
-    color:blue
-}
+    color:blue;
+    margin-left: 45%;
+    margin-top:0px;
+    font-size: 1.5em;
+} 
 .upload-button{
     background-color: blue;
     font-size: 1.5em;
