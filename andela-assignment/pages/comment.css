@@ -48,3 +48,14 @@ textarea{
     color: white;
     font-size: 1.5rem;
 }
+.title{
+    color: blue;
+    font-size: 30px;
+    margin: 0;
+}
+.backhome{
+    color: blue;
+    margin-top: 0px;
+    font-size: 35px;
+    text-decoration: none;
+}
