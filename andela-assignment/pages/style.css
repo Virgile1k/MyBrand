@@ -367,10 +367,10 @@ position: absolute;
       }
       .sidepanel{
              position: absolute;
-            width: 200px;
+            width:15%;
             height:94%;
             left: 0px;
-            top: 30px;
+            top: 4.5%;
             background-color: rgb(255, 255, 255);
             box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
@@ -385,7 +385,7 @@ position: absolute;
             background: #FFFFFF;
             border: 1px solid #0A3C9B;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 20px;
+            border-radius: 2px;
       }
            .middle-upper-panelf{
                background-color: blue;
@@ -398,7 +398,7 @@ position: absolute;
                background: #FFFFFF;
                border: 1px solid #0A3C9B;
                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-               border-radius: 20px;
+               border-radius: 2px;
            }
                    .middle-upper-panell{
                        background-color: blue;
@@ -406,45 +406,34 @@ position: absolute;
                        position: absolute;
                        width: 250px;
                        height: 250px;
-                       left: 950px;
+                       margin-left: 70%;
                        top: 80px;
                        background: #FFFFFF;
                        border: 1px solid #0A3C9B;
                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-                       border-radius: 20px;
+                       border-radius: 2px;
                    }
 .undermidllepanel{
-    background-color:blue;
-    box-sizing: border-box;
+        background-color:blue;
+         box-sizing: border-box;
         position: absolute;
         width: 70%;
-        height: 50px;
+        height: 44.5%;
         left: 250px;
         top: 340px;
         background: rgba(217, 217, 217, 0.07);
         border: 1px solid #130047;
         font-size: large;
 }
-.undermidllepanel4{
-    background-color: blue;
-    box-sizing: border-box;
-    position: absolute;
-    width: 70%;
-    height: 38%;
-    left: 250px;
-    top: 380px;
-    background: rgba(217, 217, 217, 0.07);
-    border: 1px solid #130047;
-}
 .content-edit{
-    background-color:rgb(255, 255, 255);
-    position: absolute;
-    width: 1000px;
-    height: 465px;
-    left: 300px;
-    top: 150px;
     display: flex;
-    box-shadow: 12px 12px 12px ;
+     background-color: white;
+     border: 4px solid blue;
+     margin-left: 17%;
+     margin-top:6%;
+     height: 84vh;
+  
+  
 }
 .blogedit{
     box-sizing: border-box;
@@ -452,12 +441,11 @@ position: absolute;
         width: 300px;
         height: 200px;
         left: 0px;
-        background: url(.jpg), rgba(255, 251, 251, 0.12);
         border: 1px solid #0077e6;
 }
 .blogeditdown-panel{
-    width: 250px;
-        height: 250px;
+    width:50%;
+        height:45%;
         border: 1px solid #c25656;
         margin: 20px;
         float: left;
@@ -470,8 +458,13 @@ position: absolute;
 }
  .blog-edit-image{
             width:100%;
-            height: 70%;
+            height: 50%;
             object-fit: cover;
+ }
+ #blogedit-prgrph{
+    font-size: 1em;
+    font-weight: bol;
+
  }
  .iconise-delete{
     background-color: red;
