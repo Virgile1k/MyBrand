@@ -2,8 +2,6 @@
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const Username =doucment.getElementById('usrname');
-
 form.addEventListener('submit', e => {
 e.preventDefault();
 validateInputs();
@@ -61,15 +59,7 @@ if (storedUser && storedUser.email === emailValue && storedUser.password === pas
     // Redirect user to admin page
     window.location.href = 'Admindashboard.html';
 //end of admin page
-    const storedUser = JSON.parse(localStorage.getItem('user'));
-
-  // Set the user's name
-  const username = document.getElementById('username');
-  username.textContent = storedUser.name;
-
-  // Set the user's profile picture
-  const profilePic = document.getElementById('profile-pic');
-  profilePic.src = storedUser.profilePicture
+ 
 
 }
 };
