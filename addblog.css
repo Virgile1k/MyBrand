@@ -1,0 +1,151 @@
+body {
+    background-color: white;
+    font-family: 'IBM Plex Sans Hebrew';
+}
+
+.container {
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1;
+    margin-top: 2%;
+
+}
+
+input[type="text"],
+input[type="date"],
+input[type="dropdown"],
+select {
+    height: 50px;
+}
+
+/*Admin Dashboard*/
+.dashboard-title {
+    line-height: 41px;
+    color: #0058FF;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.sidepanel {
+    position: absolute;
+    width: 200px;
+    height: 94%;
+    left: 0px;
+    top: 30px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.blogedit {
+    box-sizing: border-box;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 0px;
+    background: url(.jpg), rgba(255, 251, 251, 0.12);
+    border: 1px solid #0077e6;
+}
+
+.blogeditdown-panel {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #c25656;
+    margin: 20px;
+    float: left;
+    top: 5px;
+    text-align: center;
+    position: relative;
+    left: 1px;
+    box-sizing: border-box;
+
+}
+
+.blog-edit-image {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.iconise-delete {
+    background-color: red;
+}
+
+.iconise-edit {
+    background-color: skyblue;
+}
+
+.adminimage {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-image: url('../graphics/VG.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    left: 1200px;
+    top: 10px;
+}
+
+.logout {
+
+    position: absolute;
+    left: 12px;
+    top: 80px;
+}
+
+.editblogs {
+    position: absolute;
+    top: 182px;
+    color: blue;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.manageblog {
+    background-color: #0058FF;
+}
+
+.managetitle {
+    color: blue;
+    text-decoration: none;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 280px;
+}
+
+.upload {
+    background-color: #0058FF;
+    height: 2em;
+    width: 4rem;
+    margin-left: 92.5%;
+    color: white;
+    border-color: #0058FF;
+    margin-top: 2%;
+}
+
+.titles {
+    font-size: 1.2rem;
+    color: #0077e6;
+}
+a{
+    color: blue;
+    font-size: 45px;
+    text-decoration: none;
+}
+.add-post-title{
+    color:blue;
+    margin-left: 45%;
+    margin-top:0px;
+    font-size: 1.5em;
+} 
+.upload-button{
+    background-color: blue;
+    font-size: 1.5em;
+    color: white;
+    margin-left:90%;
+    margin-top: 2%;
+    width: 100px;
+    border-color: blue;
+}
