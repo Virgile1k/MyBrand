@@ -472,7 +472,8 @@ position: absolute;
  .iconise-edit{
     background-color:skyblue;
  }
- .adminimage{
+ /*
+ #user-profile{
     position: absolute;
         width: 80px;
         height: 80px;
@@ -483,7 +484,32 @@ position: absolute;
         position: fixed;
         left: 1200px;
         top: 10px;
- }
+ }*/
+/*creating user profile css*/
+#user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    margin-left: 90%;
+}
+
+.user-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+/*end of user cre profile creation*/
  .logout{
 
        position: absolute;

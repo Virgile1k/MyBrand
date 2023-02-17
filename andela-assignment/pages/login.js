@@ -59,5 +59,14 @@ const storedUser = JSON.parse(localStorage.getItem('user'));
 if (storedUser && storedUser.email === emailValue && storedUser.password === passwordValue) {
     // Redirect user to admin page
     window.location.href = 'Admindashboard.html';
+    //displaying user information
+    // Display user profile information
+const userProfile = document.getElementById('user-profile');
+const userName = userProfile.querySelector('.user-name');
+const userImage = userProfile.querySelector('.user-image');
+
+userName.innerText = storedUser.name;
+userImage.src = storedUser.profilePicture;
+
 }
 };

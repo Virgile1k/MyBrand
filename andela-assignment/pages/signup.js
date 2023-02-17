@@ -71,7 +71,7 @@ const validateInputs = () => {
     // checking if a user exist in the system
     const existingUser = JSON.parse(localStorage.getItem('user'));
     if(existingUser&&existingUser.email === emailValue){
-        setError(email,'user already exist');
+        setError(email,'user already exist please login')  
         requestAnimationFrame;
     }
 
