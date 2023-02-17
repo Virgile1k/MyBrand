@@ -60,5 +60,16 @@ const storedUser = JSON.parse(localStorage.getItem('user'));
 if (storedUser && storedUser.email === emailValue && storedUser.password === passwordValue) {
     // Redirect user to admin page
     window.location.href = 'Admindashboard.html';
+//end of admin page
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+  // Set the user's name
+  const username = document.getElementById('username');
+  username.textContent = storedUser.name;
+
+  // Set the user's profile picture
+  const profilePic = document.getElementById('profile-pic');
+  profilePic.src = storedUser.profilePicture
+
 }
 };
