@@ -2,7 +2,7 @@
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const Username =document.getElementById('username');
+const Username =doucment.getElementById('usrname');
 
 form.addEventListener('submit', e => {
 e.preventDefault();
@@ -60,13 +60,16 @@ const storedUser = JSON.parse(localStorage.getItem('user'));
 if (storedUser && storedUser.email === emailValue && storedUser.password === passwordValue) {
     // Redirect user to admin page
     window.location.href = 'Admindashboard.html';
-    //displaying user information
-    // Display user profile information
-    const username = storedUser.username;
-    const userImage = storedUser.image;
-      userProfile.innerHTML = `
-      <img class="user-image" src="${userImage}" alt="Profile Picture">
-      <h2 class="user-name">${username}</h2>
-    `;
+//end of admin page
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+  // Set the user's name
+  const username = document.getElementById('username');
+  username.textContent = storedUser.name;
+
+  // Set the user's profile picture
+  const profilePic = document.getElementById('profile-pic');
+  profilePic.src = storedUser.profilePicture
+
 }
 };
