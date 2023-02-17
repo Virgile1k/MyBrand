@@ -2,6 +2,7 @@
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const Username =document.getElementById('username');
 
 form.addEventListener('submit', e => {
 e.preventDefault();
@@ -61,12 +62,11 @@ if (storedUser && storedUser.email === emailValue && storedUser.password === pas
     window.location.href = 'Admindashboard.html';
     //displaying user information
     // Display user profile information
-const userProfile = document.getElementById('user-profile');
-const userName = userProfile.querySelector('.user-name');
-const userImage = userProfile.querySelector('.user-image');
-
-userName.innerText = storedUser.name;
-userImage.src = storedUser.profilePicture;
-
+    const username = storedUser.username;
+    const userImage = storedUser.image;
+      userProfile.innerHTML = `
+      <img class="user-image" src="${userImage}" alt="Profile Picture">
+      <h2 class="user-name">${username}</h2>
+    `;
 }
 };
