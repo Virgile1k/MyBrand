@@ -2,6 +2,7 @@
 const form = document.getElementById('form');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const Username =doucment.getElementById('usrname');
 
 form.addEventListener('submit', e => {
 e.preventDefault();
