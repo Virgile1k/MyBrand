@@ -50,7 +50,7 @@ a{
      width: 200px;
      height: 200px;
      border-radius: 50%;
-     background-image: url('../graphics/VG.jpg');
+     background-image: url('./graphics/VG.jpg');
      background-size: cover;
      background-position: center;
     display: flex;
