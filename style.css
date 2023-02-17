@@ -247,7 +247,7 @@ position: absolute;
         border-radius: 150px;
         left: 75%;
         top: 10%;
-        background: url('../graphics/Marketing-skills.jpg');
+        background: url('./graphics/Marketing-skills.jpg');
         background-size: cover;
         background-position: center;
        
