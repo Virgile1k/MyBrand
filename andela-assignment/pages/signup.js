@@ -68,6 +68,13 @@ const validateInputs = () => {
     } else {
         setSuccess(password2);
     }
+    // checking if a user exist in the system
+    const existingUser = JSON.parse(localStorage.getItem('user'));
+    if(existingUser&&existingUser.email ===emailvalue){
+        setError(email,'user already exist');
+        requestAnimationFrame;
+    }
+    
    if (usernameValue && emailValue && passwordValue && password2Value && passwordValue === password2Value) {
         const user = {
             username: usernameValue,
