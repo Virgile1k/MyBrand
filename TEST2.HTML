@@ -1,62 +1,113 @@
-<!DOCTYPE html>
+ !DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <STYle>
-        .blog-post {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1em;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dastyle.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+  <title>Capstone Project</title>
 
-.post-thumbnail {
-  width: 25%;
-  margin-right: 1em;
-}
-
-.post-thumbnail img {
-  width: 100%;
-  height: auto;
-}
-
-.post-content {
-  width: 75%;
-}
-
-.post-title {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-.post-excerpt {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 0.5em;
-}
-
-.read-more {
-  font-size: 1.2em;
-  color: #0366d6;
-  text-decoration: none;
-}
-
-    </STYle>
 </head>
+
 <body>
-    <div class="blog-post">
-        <div class="post-thumbnail">
-            <img src="post-thumbnail.jpg" alt="Post Thumbnail">
+  <section class="menu" id="menu">
+    <div class="logo">
+      <h2><span>[JS]</span> Jolivet.</h2>
+    </div>
+    <div class="items">
+      <li><i class='bx bxs-dashboard'></i> <a href="home.html">Dashboard</a></li>
+      <li><i class='bx bx-food-menu'></i><a href="article.html">Articles</a></li>
+      <li><i class='bx bx-layout'></i><a href="queries.html">Queries</a></li>
+      <li><i class='bx bx-user'></i><a href="users.html">Users</a></li>
+      <li><i class='bx bx-log-out'></i><a href="../blogs/Auntentication/login/login.html">Logout</a></li>
+    </div>
+  </section>
+
+  <section id="interface" class="interface">
+    <div class="navigation">
+      <div class="n1">
+        <div>
+          <i class="bx bx-menu" id="menu-btn"></i>
         </div>
-        <div class="post-content">
-            <h2 class="post-title">Blog Post Title</h2>
-            <p class="post-excerpt">This is a brief preview of the blog post content. It provides a brief summary of the
-                post for readers to get an idea of what the post is about.</p>
-            <a href="#" class="read-more">Read More</a>
+        <div class="search">
+          <i class='bx bx-search'></i>
+          <input type="text" placeholder="Search" id="">
         </div>
+      </div>
+      <div class="profile">
+        <img src="../img/profile.jpg" alt="">
+        <div class="name">
+          <h3 id="currentLogin"></h3>
+        </div>
+      </div>
+    </div>
+    <h3 class="i-name">
+      Edit Blog
+    </h3>
+    <p class="i-description">
+      Edit blog here
+    </p>
+    <div class="form-container">
+      <form action="#" id="editForm">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" placeholder="Title">
+          <div class="error"></div>
+        </div>
+        <div class="form-group">
+          <label for="author">Date:</label>
+          <input type="date" name="date" id="date" placeholder="Date">
+          <div class="error"></div>
+        </div>
+        <div class="form-group">
+          <label for="author">Picture:</label>
+          <input type="file" id="picture" placeholder="upload image">
+          <div class="error"></div>
+        </div>
+        <div class="form-group">
+          <label for="author">Body:</label>
+          <textarea id="body" name="body">Enter your articles Body</textarea>
+          <div class="error"></div>
+        </div>
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <select name="action" id="category">
+            <option value="Published">None</option>
+            <option value="Published">Tech</option>
+            <option value="Not published">web</option>
+          </select>
+          <div class="error"></div>
+        </div>
+        <div class="form-group">
+          <label for="author">Status:</label>
+          <select name="action" id="statuse">
+            <option value="Published">None</option>
+            <option value="Published">Published</option>
+            <option value="Not published">Not published</option>
+          </select>
+          <div class="error"></div>
+        </div>
+        <input type="submit" value="Save" id="addBlog">
+        <!-- <a href="article.html" class="submit-btn"> Save</a> -->
+      </form>
     </div>
 
+
+  </section>
+  <script>
+    $('#menu-btn').click(function () {
+      $('#menu').toggleClass('active');
+    });
+  </script>
+  <script defer src="./test3.js"></script>
 </body>
+
 </html>

@@ -11,7 +11,7 @@
 <body>
     <a href="Admindashboard.html" class="backdash">Dashboard</a>
     <h4 class="add-post-title">Add New Post</h4>
-    <form action="" class="container">
+    <form action="" class="container" id="form">
         <label for="title" class="titles">Title</label>
         <input type="text" id="title" placeholder="Title">
         <label for="date" class="titles">Date</label>
@@ -19,14 +19,14 @@
         <label for="picture" class="titles">Picture</label>
         <input type="file" id="picture" placeholder="picture">
         <label for="textarea" class="titles">Blog body</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="body" cols="30" rows="10"></textarea>
         <label for="select" class="titles">Select Blog Category</label>
-        <select name="action" id="statuse">
+        <select name="action" id="category">
             <option value="Published">None</option>
             <option value="Published">Studying</option>
             <option value="Not published">Technews</option>
         </select>
     </form>
-  <button type="submit" id="submit" class="upload-button">Upload</button>
+  <button type="submit" id="submit" class="upload-button" id="addblog">Upload</button>
 </body>
 </html>
