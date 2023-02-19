@@ -68,7 +68,7 @@ const validateInputs = () => {
     } else {
         setSuccess(password2);
     }
-    //retreiving user form the local storage
+    //retreiving user form the c
  if (usernameValue && emailValue && passwordValue && password2Value && passwordValue === password2Value) {
   let users = JSON.parse(localStorage.getItem('users')) || [];
 
@@ -89,6 +89,7 @@ const validateInputs = () => {
 
   users.push(newUser);
   localStorage.setItem('users', JSON.stringify(users));
-  console.log('User saved to local storage:', newUser);
+  alert('User saved to local storage:', newUser);
+  window.location.href = 'login.html';
   form.reset();
 }}

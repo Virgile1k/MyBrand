@@ -52,14 +52,15 @@ if (passwordValue === '') {
 } else {
     setSuccess(password);
 }
+   const users = JSON.parse(localStorage.getItem('users')) || [];
+      const user = users.find(user => user.email === emailValue);
 
-// Retrieve user from local storage
-const storedUser = JSON.parse(localStorage.getItem('user'));
-if (storedUser && storedUser.email === emailValue && storedUser.password === passwordValue) {
-    // Redirect user to admin page
-    window.location.href = 'Admindashboard.html';
-//end of admin page
- 
-
-}
-};
+      if (user && user.password === passwordValue) {
+        console.log('User logged in:', user);
+        window.location.href = 'admin-dashboard.html'; // replace with your admin dashboard URL
+      } else {
+        alert('Invalid email or password.');
+      }
+      
+      form.reset();
+    }
