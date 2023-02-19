@@ -57,7 +57,7 @@ if (passwordValue === '') {
 
       if (user && user.password === passwordValue) {
         console.log('User logged in:', user);
-        window.location.href = 'admin-dashboard.html'; // replace with your admin dashboard URL
+        window.location.href = 'Admindashboard.html'; // replace with your admin dashboard URL
       } else {
         alert('Invalid email or password.');
       }

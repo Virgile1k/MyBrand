@@ -89,7 +89,7 @@ const validateInputs = () => {
 
   users.push(newUser);
   localStorage.setItem('users', JSON.stringify(users));
-  alert('User saved to local storage:', newUser);
+  alert('Registered succefully', newUser);
   window.location.href = 'login.html';
   form.reset();
 }}
