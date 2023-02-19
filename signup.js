@@ -1,4 +1,4 @@
-  const form = document.getElementById('form');
+   const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
@@ -68,21 +68,27 @@ const validateInputs = () => {
     } else {
         setSuccess(password2);
     }
-    // checking if a user exist in the system
-    const existingUser = JSON.parse(localStorage.getItem('user'));
-    if(existingUser&&existingUser.email === emailValue){
-        setError(email,'user already exist please login')  
-        requestAnimationFrame;
-    }
+    //retreiving user form the local storage
+ if (usernameValue && emailValue && passwordValue && password2Value && passwordValue === password2Value) {
+  let users = JSON.parse(localStorage.getItem('users')) || [];
 
-   if (usernameValue && emailValue && passwordValue && password2Value && passwordValue === password2Value) {
-        const user = {
-            username: usernameValue,
-            email: emailValue,
-            password: passwordValue
-        };
-        localStorage.setItem('user', JSON.stringify(user));
-        console.log('User saved to local storage:', user);
-         form.reset();
-    }
-};
+  // Check if user with same email already exists
+  const existingUser = users.find(user => user.email === emailValue);
+
+  if (existingUser) {
+    setError(email, 'User already exists, please login.');
+    requestAnimationFrame(() => email.focus());
+    return;
+  }
+
+  const newUser = {
+    username: usernameValue,
+    email: emailValue,
+    password: passwordValue
+  };
+
+  users.push(newUser);
+  localStorage.setItem('users', JSON.stringify(users));
+  console.log('User saved to local storage:', newUser);
+  form.reset();
+}}
