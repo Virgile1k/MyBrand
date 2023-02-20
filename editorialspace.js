@@ -1,6 +1,6 @@
   //form validation 
   // Validate form inputs
-function validateForm() {
+ function validateForm() {
   var title = document.getElementById('title').value;
   var date = document.getElementById('date').value;
   var body = document.getElementById('body').value;
