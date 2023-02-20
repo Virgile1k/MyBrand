@@ -125,10 +125,13 @@ a{
 
  .skill-column {
         width: calc(25% - 20px);
+        display: flex;
+        flex-direction: column;
         padding: 10px;
         text-align: center;
         box-shadow: 0 4px 6px rgba(8, 8, 8, 0.808);
         box-sizing: border-box;
+        border: 4px solid blue;
         font-weight: bold;
         border-radius: 12px;
         color:rgb(0, 0, 102);
@@ -160,18 +163,16 @@ a{
  .left-about{
         position: absolute;
         display: flex;
-        flex-wrap: wrap;
-        height:px;
-        left: 700px;
+        flex-direction: column;
+        left: 50%;
         top: 450px;
         font-family: 'IBM Plex Sans Hebrew';
         font-style: normal;
         font-weight: bold;
-        font-size: 20px;
-        line-height: 39px;
         color: #000000;
         box-sizing: border-box;
-        box-shadow:12px 12px 12px;
+        border: 4px solid blue;
+        box-shadow:1px 2px 4px;
         margin:2px 2px 0px;
  }
  /*about section*/
@@ -183,18 +184,16 @@ a{
  .right-about{
 position: absolute;
     width: 465px;
-    display:block;
     height: 490px;
-    left: 100px;
+    left: 5%;
     top: 100px;
     font-family: 'IBM Plex Sans Hebrew';
     font-style: normal; 
     font-weight: bold;
-    font-size: 22px;
-    line-height: 39px;
     color: black;
     box-sizing: border-box;
-    box-shadow: 12px 12px 12px;
+    border: 4px solid blue;
+    box-shadow: 1px 2px 4px;
  }
  #abouth2{
     color: blue;
@@ -205,31 +204,40 @@ position: absolute;
     font-size: 1.53em;
     position: absolute;;
     margin: 0;
+    top:8%;
     left: 30%;      
  }
  .edsection{
-    display: flex;
-    position: absolute;
-        width: 58%;
-       left: 9%;
+     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+      position: absolute;
+        width: 65%;
+       left: 5%;
         top: 15%;
         font-family: 'IBM Plex Sans Hebrew';
-        font-size: 20px;
+        font-size: 1rem;
         line-height: 1.5em;
-        font-weight: 200;
+        font-weight: 700;
         box-sizing: border-box;
-       box-shadow: 4px 4px 4px;
+        border: 3px solid blue;
+       box-shadow: 2px 2px 2px;
  }
  .expsection{
     display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
      position: absolute;
-     font-size: 20px;
-     font-weight:200;
-     width: 75%;
-    left: 10%;
+     font-size: 1rem;
+     font-weight:700;
+     width: 90%;
+     height: 20rem;
+    left: 5%;
     top: 45%;
     font-family: 'IBM Plex Sans Hebrew';
-    box-shadow: 4px 4px 4px;
+    box-sizing: border-box;
+    border: 3px solid blue;
+    box-shadow: 2px 2px 2px;
    
  }
  .expheading{
@@ -254,6 +262,9 @@ position: absolute;
  } 
  .project-worked{
        display: flex;
+       
+       box-sizing: border-box;
+       border-color: 3px solid rgb(255, 2, 86);
         position: absolute;
         font-size:0.53em;
         font-weight: 200;
@@ -587,7 +598,9 @@ position: absolute;
      width: 300px;
      margin: 20vh auto 0 auto;
      padding: 2.5em;
-     background-color:  white;
+     background-color:  rgb(255, 255, 255);
+     box-sizing: border-box;
+     border: 3px solid blue;
      border-radius: 4px;
      font-size: 12px;
      box-shadow: 4px 4px 4px;
@@ -615,7 +628,7 @@ position: absolute;
  }
 
  .input-control input {
-     border: 2px solid #685e5e;
+     border: 2px solid #2b06d4;
      border-radius: 4px;
      display: block;
      font-size: 12px;
