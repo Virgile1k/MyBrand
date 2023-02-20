@@ -1,32 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Addblog</title>
+    <script defer src="./editorialspace.js"></script>
+    <link rel="stylesheet" href="./editorialspace.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>editorial-space</title>
-    <script  defer src="./editorialspace.js"></script>
-    <link rel="stylesheet" href="./addblog.css">
+    <style>
+
+    </style>
 </head>
+
 <body>
-    <a href="Admindashboard.html" class="backdash">Dashboard</a>
-    <h4 class="add-post-title">Add New Post</h4>
-    <form action="" class="container" id="form">
-        <label for="title" class="titles">Title</label>
-        <input type="text" id="title" placeholder="Title">
-        <label for="date" class="titles">Date</label>
-        <input type="date" id="date" placeholder="date">
-        <label for="picture" class="titles">Picture</label>
-        <input type="file" id="picture" placeholder="picture">
-        <label for="textarea" class="titles">Blog body</label>
-        <textarea name="" id="body" cols="30" rows="10"></textarea>
-        <label for="select" class="titles">Select Blog Category</label>
-        <select name="action" id="category">
-            <option value="Published">None</option>
-            <option value="Published">Studying</option>
-            <option value="Not published">Technews</option>
-        </select>
-    </form>
-  <button type="submit" id="submit" class="upload-button" id="addblog">Upload</button>
+    <div class="container ">
+        <a href="Admindashboard.html" class="blog-add">Dashboard</a>
+        <a href="Dahboard.html"></a>
+        <center>
+            <h3 class="blog-add">Add Blog </h3>
+        </center>
+        <form id="blogForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter title">
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" onchange="previewImage(event)">
+            <img id="imagePreview" class="image-preview" src="#" alt="">
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="body">Body:</label>
+            <textarea id="body" name="body" placeholder="Enter text"></textarea>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="previewBlog()">Preview</button>
+        </form>
+
+        <div id="blogPreview"></div>
+    </div>
 </body>
+
 </html>
