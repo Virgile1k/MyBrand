@@ -7,37 +7,22 @@
     <title>Blogmore</title>
      <link rel="stylesheet" href="./comment.css">
 </head>
-<body> 
-    <h2><a href="./blogs.html" class="backhome">Blogs</a></h2>
-    <center><H2 class="title">Labmborgin Urus</H2></center>
-    <div class="readmore-container">
-        <div class="read-more-picture">
-            <img src="../graphics/lamborghini-urus.jpg" alt="" class="read-more-picture">
-            <h2 class="title-bl">The story of Urus</h2>
-            <div class="read-more-page">
-                <p>The Lamborghini Urus is a high-performance SUV that embodies the Italian automaker's tradition of extreme luxury,
-                breathtaking design, and exhilarating performance. It's powered by a 4.0-liter twin-turbo V8 engine that delivers 641
-                horsepower, which can take it from 0 to 60 mph in just 3.5 seconds, and up to a top speed of 190 mph. The Urus also
-                features an advanced all-wheel-drive system, adaptive air suspension, and carbon-ceramic brakes, ensuring exceptional
-                handling and stability on any terrain. The cabin is spacious, stylish, and loaded with high-tech features, making the
-Lamborghini Urus an impressive blend of performance, luxury, and practicality.</p>
-            </div>
-            <!--comment section-->
-           <div>
-            <form action="" id="form" class="formed">
-                <label for="name" id="name"  class="lab-el">Name</label>
-                <input type="text" placeholder="name">
-                <label for="email" id="email" class="lab-el">Email</label>
-                <input type="text" placeholder="email"  id="email">
-                <br>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" class="submit-btn">
-            </form>
-           </div>
-                                      
-                    
-          
-        </div>
+ 
+    <div class="blog-card">
+        <h2>Blog Post Title</h2>
+        <img src="path/to/image" alt="Blog Post Image">
+        <p>Date: January 1, 2022</p>
+        <p>This is the full body text of the blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
+        <form class="comment-form">
+            <label for="comment-name">Name</label>
+            <input type="text" id="comment-name" name="name" required>
+            <label for="comment-message">Message</label>
+            <textarea id="comment-message" name="message" required></textarea>
+            <input type="submit" value="Post Comment">
+        </form>
+    </div>
+
+
 </body>
 </html>

@@ -40,7 +40,7 @@
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #75b178;
         }
 
         /* Style for blog card */
@@ -57,3 +57,47 @@
             height: auto;
             margin-bottom: 10px;
         }
+                .blog-card {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                }
+        
+                .blog-title {
+                    font-size: 24px;
+                    margin: 0 0 10px;
+                }
+        
+                .blog-image {
+                    max-width: 100%;
+                    margin-bottom: 10px;
+                }
+        
+                .blog-date {
+                    margin: 0 0 10px;
+                }
+        
+                .blog-body {
+                    margin: 0 0 20px;
+                }
+        
+                .blog-buttons {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+        
+                .delete-button,
+                .update-button {
+                    margin-left: 10px;
+                    border: none;
+                    background-color: #ddd;
+                    color: #333;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                }
+        
+                .delete-button:hover,
+                .update-button:hover {
+                    background-color: #aaa;
+                    color: #fff;
+                }

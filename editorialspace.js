@@ -104,21 +104,78 @@ document.getElementById('blogForm').addEventListener('submit', function (event) 
     }
 
     // Load blog data from local storage
-    var storedBlogDataArray = JSON.parse(localStorage.getItem('blogDataArray'));
-    if (storedBlogDataArray) {
-        blogDataArray = storedBlogDataArray;
-        for (var i = 0; i < blogDataArray.length; i++) {
-            var blogData = blogDataArray[i];
-            var title = blogData.title;
-            var image = blogData.image;
-            var date = blogData.date;
-            var body = blogData.body;
+    // Load blog data from local storage
+var storedBlogDataArray = JSON.parse(localStorage.getItem('blogDataArray'));
+if (storedBlogDataArray) {
+  blogDataArray = storedBlogDataArray;
+  for (var i = 0; i < blogDataArray.length; i++) {
+    var blogData = blogDataArray[i];
+    var title = blogData.title;
+    var image = blogData.image;
+    var date = blogData.date;
+    var body = blogData.body;
 
-            var blogPreview = '<div class="blog-card">' +
-                '<h2>' + title + '</h2>' +
-                '<img src="' + image + '" alt="">' +
-                '<p>Date: ' + date + '</p>' +
-                '<p>' + body + '</p>' +
-                '</div>';
-            document.getElementById('blogPreview').innerHTML=blogPreview;
-        }}
+    var blogPreview = '<div class="blog-card">' +
+      '<h2>' + title + '</h2>' +
+      '<img src="' + image + '" alt="">' +
+      '<p>Date: ' + date + '</p>' +
+      '<p>' + body + '</p>' +
+      '<button onclick="deleteBlog(' + i + ')">Delete</button>' +
+      '<button onclick="updateBlog(' + i + ')">Update</button>' +
+      '</div>';
+    document.getElementById('blogPreview').innerHTML += blogPreview;
+  }
+}
+
+// Delete blog
+function deleteBlog(index) {
+  blogDataArray.splice(index, 1);
+  localStorage.setItem('blogDataArray', JSON.stringify(blogDataArray));
+  document.getElementById('blogPreview').innerHTML = '';
+  for (var i = 0; i < blogDataArray.length; i++) {
+    var blogData = blogDataArray[i];
+    var title = blogData.title;
+    var image = blogData.image;
+    var date = blogData.date;
+    var body = blogData.body;
+
+    var blogPreview = '<div class="blog-card">' +
+      '<h2>' + title + '</h2>' +
+      '<img src="' + image + '" alt="">' +
+      '<p>Date: ' + date + '</p>' +
+      '<p>' + body + '</p>' +
+      '<button onclick="deleteBlog(' + i + ')">Delete</button>' +
+      '<button onclick="updateBlog(' + i + ')">Update</button>' +
+      '</div>';
+    document.getElementById('blogPreview').innerHTML += blogPreview;
+  }
+}
+
+// Update blog
+function updateBlog(index) {
+  var blogData = blogDataArray[index];
+  document.getElementById('title').value = blogData.title;
+  document.getElementById('imagePreview').src = blogData.image;
+  document.getElementById('date').value = blogData.date;
+  document.getElementById('body').value = blogData.body;
+  blogDataArray.splice(index, 1);
+  localStorage.setItem('blogDataArray', JSON.stringify(blogDataArray));
+  document.getElementById('blogPreview').innerHTML = '';
+  for (var i = 0; i < blogDataArray.length; i++) {
+    var blogData = blogDataArray[i];
+    var title = blogData.title;
+    var image = blogData.image;
+    var date = blogData.date;
+    var body = blogData.body;
+
+    var blogPreview = '<div class="blog-card">' +
+      '<h2>' + title + '</h2>' +
+      '<img src="' + image + '" alt="">' +
+      '<p>Date: ' + date + '</p>' +
+      '<p>' + body + '</p>' +
+      '<button onclick="deleteBlog(' + i + ')">Delete</button>' +
+      '<button onclick="updateBlog(' + i + ')">Update</button>' +
+      '</div>';
+    document.getElementById('blogPreview').innerHTML += blogPreview;
+  }
+}
