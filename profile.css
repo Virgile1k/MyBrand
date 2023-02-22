@@ -1,0 +1,18 @@
+.containersudo{
+    display: flex;
+  
+    align-items: center;
+    margin-left:90%;
+    margin-top: 0;
+}
+
+.profile-pic {
+    background-color: #bbb;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+h2 {
+    font-size: 30px;
+}

@@ -282,7 +282,8 @@ position: absolute;
 
  
       /*Admin Dashboard*/
-                .sidepanel {
+      
+       .sidepanel {
                     position: absolute;
                     display: flex;
                     flex-direction: column;
@@ -299,7 +300,6 @@ position: absolute;
     .dashboard-container{
         display: flex;
         box-sizing: border-box;
-        margin-top: 15px;
         border: 2px solid whitesmoke;
         margin-left: 20%;
         margin-right: 2%;
@@ -333,7 +333,7 @@ position: absolute;
             .view{
                 display: flex;
                 flex-direction: column;
-                height: 20pc;
+                height: 15pc;
                 display: flexbox;
                 margin-left: 20%;
                 margin-right: 2%;
