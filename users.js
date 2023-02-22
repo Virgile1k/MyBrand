@@ -1,6 +1,7 @@
-const getUsers = () => {
+ const getUsers = () => {
   return JSON.parse(localStorage.getItem('users')) || [];
 };
+
 const userTableBody = document.querySelector('tbody');
 
 const renderUsers = () => {
@@ -23,12 +24,22 @@ const renderUsers = () => {
     row.appendChild(emailCell);
 
     const actionsCell = document.createElement('td');
+
     const editButton = document.createElement('button');
     editButton.textContent = 'Edit';
+    editButton.addEventListener('click', () => {
+      window.location.href = `edit.html?index=${index}`;
+    });
     actionsCell.appendChild(editButton);
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', () => {
+      const users = getUsers();
+      users.splice(index, 1);
+      localStorage.setItem('users', JSON.stringify(users));
+      renderUsers();
+    });
     actionsCell.appendChild(deleteButton);
 
     row.appendChild(actionsCell);
@@ -37,6 +48,7 @@ const renderUsers = () => {
 };
 
 renderUsers();
+
 const addUserButton = document.querySelector('button');
 addUserButton.addEventListener('click', () => {
   window.location.href = 'register.html';
