@@ -282,8 +282,7 @@ position: absolute;
 
  
       /*Admin Dashboard*/
-      
-       .sidepanel {
+                .sidepanel {
                     position: absolute;
                     display: flex;
                     flex-direction: column;
