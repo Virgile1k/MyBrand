@@ -16,7 +16,7 @@ form.addEventListener('submit', e => {
   .then((data) => {
     localStorage.setItem("token", data.token);
     location.href = "./Admindashboard.html";
-    console.log(blog.message);
+    console.log(data.message);
   })
   .catch(err => console.log(err));
 });
