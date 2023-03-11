@@ -1,32 +1,40 @@
  // FORM VALIDATION on the Login page
-const form = document.getElementById('form');
+ const form = document.getElementById('form');
 form.addEventListener('submit', e => {
-e.preventDefault();
-});
-const emailValue= document.getElementById('email').value;
-const passwordValue = document.getElementById('password').value;
-const data={email: emailValue, password:passwordValue}
-
-  // use fetch method to interact with your login api endpoint
-  fetch('https://bored-bull-pantsuit.cyclic.app api/v1/login', {
+  e.preventDefault();
+  const emailValue= document.getElementById('email').value;
+  const passwordValue = document.getElementById('password').value;
+  const data={email: emailValue, password:passwordValue}
+  fetch('http://localhost:3000/api/v1/login', {
     method: "POST",
     headers: {
-    "Content-Type": "application/json"
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(data)
-    })
-    .then((response) => response.json())
-    .then((data) => {
-    console.log(data)
-    if (data.ok) {
-    // set our token in LS
-    localStorage.setItem("tok", data.token)
-    location.href = "/Admindashboard.html"
-    } else {
-    alert(data.message)
-    }
-    })
-    .catch(err => alert(err));
+  })
+  .then((response) => response.json())
+  .then((blog) => {
+    localStorage.setItem("token", blog.token);
+    location.href = "/Admindashboard.html";
+    console.log(blog.message);
+  })
+  .catch(err => console.log(err));
+});
+
+
+
+
+  //use fetch method to interact with your login api endpoint
+  
+    // if (data.ok) {
+    // // set our token in LS
+    // localStorage.setItem("Token", data.token)
+    // location.href = "/Admindashboard.html"
+    // } else {
+    // alert(data.message)
+    // }
+    // })
+     
     
     
     
