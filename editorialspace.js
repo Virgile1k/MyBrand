@@ -1,59 +1,122 @@
- 
+//  // Define API endpoint
+// const apiEndpoint = "https://uninterested-bear-polo-shirt.cyclic.app/blogs";
+
+// // Get form inputs
+// const titleInput = document.getElementById("title");
+// const imageInput = document.getElementById("image");
+// const dateInput = document.getElementById("date");
+// const bodyInput = document.getElementById("body");
+
+// // Get blog list container
+// const blogListContainer = document.getElementById("blogList");
+
+// // Function to create a blog post
+// const createBlogPost = async () => {
+//   // Get form input values
+//   const title = titleInput.value;
+//   const date = dateInput.value;
+//   const body = bodyInput.value;
+
+//   // Create form data object for image upload
+//   const formData = new FormData();
+//   formData.append("title", title);
+//   formData.append("date", date);
+//   formData.append("body", body);
+//   formData.append("image", imageInput.files[0]);
+
+//   try {
+//     // Send POST request to API
+//     const response = await fetch(apiEndpoint, {
+//       method: "POST",
+//       body: formData,
+//     });
+
+//     if (!response.ok) {
+//       throw new Error("Error creating blog post");
+//     }
+
+//     // Clear form inputs
+//     titleInput.value = "";
+//     imageInput.value = "";
+//     dateInput.value = "";
+//     bodyInput.value = "";
+
+//     // Reload blog list
+//     getBlogList();
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
+// // Function to get blog list
+// const getBlogList = async () => {
+//   try {
+//     // Send GET request to API
+//     const response = await fetch(apiEndpoint);
+
+//     if (!response.ok) {
+//       throw new Error("Error fetching blog list");
+//     }
+
+//     // Parse response data as JSON
+//     const blogList = await response.json();
+
+//     // Clear blog list container
+//     blogListContainer.innerHTML = "";
+
+//     // Loop through blog list and add each blog post to container
+//     blogList.forEach((blog) => {
+//       const blogContainer = document.createElement("div");
+//       blogContainer.innerHTML = `
+//         <h2>${blog.title}</h2>
+//         <img src="${blog.imageUrl}" alt="">
+//         <p>${blog.body}</p>
+//         <button onclick="previewBlog('${blog._id}')">Preview</button>
+//         <button onclick="deleteBlogPost('${blog._id}')">Delete</button>
+//         <button onclick="editBlogPost('${blog._id}')">Edit</button>
+//       `;
+//       blogListContainer.appendChild(blogContainer);
+//     });
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
+// // Function to preview blog post
+// const previewBlog = async (blogId) => {
+//   try {
+//     // Send GET request to API for specific blog post
+//     const response = await fetch(`${apiEndpoint}/${blogId}`);
+
+//     if (!response.ok) {
+//       throw new Error("Error fetching blog post");
+//     }
+
+//     // Parse response data as JSON
+//     const blog = await response.json();
+
+//     // Display preview of blog post
+//     const blogPreviewContainer = document.getElementById("blogPreview");
+//     blogPreviewContainer.innerHTML = `
+//       <h2>${blog.title}</h2>
+//       <img src="${blog.imageUrl}" alt="">
+//       <p>${blog.body}</p>
+//       <button onclick="editBlogPost('${blog._id}')">Edit</button>
+//       <button onclick="deleteBlogPost('${blog._id}')">Delete</button>
+//     `;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
+// Function to delete blog post
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   //form validation 
-//   // Validate form inputs
+  //form validation 
+  // Validate form inputs
 //  function validateForm() {
 //   var title = document.getElementById('title').value;
 //   var date = document.getElementById('date').value;
@@ -84,18 +147,33 @@
 //     return;
 //   }
 
-//   var title = document.getElementById('title').value;
-//   var image = document.getElementById('imagePreview').src;
-//   var date = document.getElementById('date').value;
-//   var body = document.getElementById('body').value;
+const form =document.getElementById("blogForm");
+form.addEventListener("submit",(event)=>{
+    event.preventDefault()
 
-//   var blogData = {
-//     title: title,
-//     image: image,
-//     date: date,
-//     body: body
-//   };
 
+  var title = document.getElementById('title').value;
+  var image = document.getElementById('image').value;
+  //var date = document.getElementById('date').value;
+  var content= document.getElementById('body').value;
+
+  var blogData = {
+    title ,  image ,content
+  
+  };
+  fetch (' https://uninterested-bear-polo-shirt.cyclic.app/api/v1/blogs',{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(blogData)
+  })
+  .then((response)=>{
+    return response.json()
+  }).then((blogData)=>{
+    alert(blogData.message)
+  })
+  .catch((error)=>alert(error))
+   
+});
 //   blogDataArray.push(blogData);
 //   localStorage.setItem('blogDataArray', JSON.stringify(blogDataArray));
 
