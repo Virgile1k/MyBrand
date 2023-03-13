@@ -3,7 +3,7 @@ let form = document.getElementById("table-m")
   // blogTable.addEventListener("submit", (event) => {
   //     event.preventDefault();
   // interacting with our getblogs endpoint
-  fetch('http://127.0.0.1:3000/api/v1/blogs')
+  fetch('  https://uninterested-bear-polo-shirt.cyclic.app/api/v1/blogs')
       .then((response) => response.json())
       .then((blogs) => {
           console.log(blogs)
