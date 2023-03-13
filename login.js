@@ -5,7 +5,7 @@ form.addEventListener('submit', e => {
   const emailValue= document.getElementById('email').value;
   const passwordValue = document.getElementById('password').value;
   const data={email: emailValue, password:passwordValue}
-  fetch('https://uninterested-bear-polo-shirt.cyclic.app/api/v1/login', {
+  fetch('http://localhost:3000/api/v1/login', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -13,12 +13,17 @@ form.addEventListener('submit', e => {
     body: JSON.stringify(data)
   })
   .then((response) => response.json())
-  .then((data) => {
-    localStorage.setItem("token", data.token);
-    location.href = "./Admindashboard.html";
-    console.log(data.message);
+  .then((data)=> {
+    if(data.message==="Logged in successfully"){
+      localStorage.setItem("token", data.token);
+      alert(data.message);
+      location.href = "./Admindashboard.html";
+    }else{
+      alert(data.message)
+    }
   })
   .catch(err => console.log(err));
+  
 });
 
 
