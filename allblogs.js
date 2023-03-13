@@ -37,7 +37,7 @@ let form = document.getElementById("table-m")
       })
       .catch(err => alert(err))
    async function deteleBlog(blogId) {
-     await fetch(`http://127.0.0.1:3000/api/v1/blogs/${blogId}`,
+     await fetch(`https://uninterested-bear-polo-shirt.cyclic.app/api/v1/blogs/${blogId}`,
           {
               method: "DELETE"
           })
