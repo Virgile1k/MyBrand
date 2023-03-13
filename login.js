@@ -5,7 +5,7 @@ form.addEventListener('submit', e => {
   const emailValue= document.getElementById('email').value;
   const passwordValue = document.getElementById('password').value;
   const data={email: emailValue, password:passwordValue}
-  fetch('http://localhost:3000/api/v1/login', {
+  fetch(' https://uninterested-bear-polo-shirt.cyclic.app/api/v1/login', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

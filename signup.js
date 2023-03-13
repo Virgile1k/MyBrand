@@ -10,7 +10,7 @@ formSignUp.addEventListener("submit", (event) => {
 
     const data = { username, email, password };
     //interacy with endpoint
-    fetch("  http://localhost:3000/api/v1/signup", {
+    fetch("  https://uninterested-bear-polo-shirt.cyclic.app/api/v1/signup", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
