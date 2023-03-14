@@ -174,6 +174,39 @@ form.addEventListener("submit",(event)=>{
   .catch((error)=>alert(error))
    
 });
+fetch('https://uninterested-bear-polo-shirt.cyclic.app/api/v1/blogs')
+  .then(response => response.json())
+  .then(data => {
+    const blogContainer = document.getElementById('blogContainer');
+    
+    // Loop through the blog posts and create a card for each one
+    data.forEach(blog => {
+      const card = document.createElement('div');
+      card.classList.add('blog-card');
+      
+      const title = document.createElement('h2');
+      title.textContent = blog.title;
+      
+      const image = document.createElement('img');
+      image.src = blog.image;
+      image.alt = 'Blog Post Image';
+      
+      const date = document.createElement('p');
+      date.textContent = `Date: ${blog.date}`;
+      
+      const content = document.createElement('p');
+      content.textContent = blog.content;
+      
+      card.appendChild(title);
+      card.appendChild(image);
+      card.appendChild(date);
+      card.appendChild(content);
+      
+      blogContainer.appendChild(card);
+    });
+  })
+  .catch(error => console.error(error));
+
 //   blogDataArray.push(blogData);
 //   localStorage.setItem('blogDataArray', JSON.stringify(blogDataArray));
 

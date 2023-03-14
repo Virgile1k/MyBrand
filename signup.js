@@ -22,7 +22,7 @@ formSignUp.addEventListener("submit", (event) => {
         .then((data) => {
             alert(data.message);
             // redirect to login page
-            window.location.href = "login.html";
+            window.location.href = "./login.html";
         })
         .catch((error) => {
             console.error(error);
