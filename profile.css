@@ -7,10 +7,11 @@
 }
 
 .profile-pic {
-    background-color: #bbb;
+    background-color: #2abdb1;
     border-radius: 50%;
     width: 100px;
     height: 100px;
+    background-image: url(./graphics/proj3.jpg);
 }
 
 h2 {
