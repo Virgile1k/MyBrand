@@ -4,7 +4,7 @@
 <head>
     <title>User Management</title>
     <link rel="stylesheet" type="text/css" href="user.css">
-    <script defer src="./users.js"></script>
+    <script defer src="./allusers.js"></script>
 </head>
 
 <body>
@@ -13,7 +13,20 @@
         <a href="./Admindashboard.html"><h3>Dashboard</h3></a>
     </header>
     <main>
-        <table>
+        <table id="table-m">
+            <thead>
+             <tr>
+                 <th>id</th>
+                 <th>username</th>
+                 <th>email</th>
+             </tr>
+            </thead>
+            <tbody>
+            </tbody>
+         </table>
+
+         
+        <!-- <table>
             <thead>
                
                 <tr>
@@ -23,7 +36,7 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- <tr>
+                <tr>
                     <td>1</td>
                     <td>John Doe</td>
                     <td>john.doe@example.com</td>
@@ -52,7 +65,7 @@
                 </tr> -->
             </tbody>
         </table>
-        <button>Add User</button>
+        <button>Add User</button> -->
     </main>
     <footer>
         <p>&copy; 2023 Virgile</p>

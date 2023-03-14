@@ -12,27 +12,27 @@
 //   });
 //function getBlogs(blogs) {
   let form = document.getElementById("table-m")
-  console.log("blog")
+  console.log("message")
   // blogTable.addEventListener("submit", (event) => {
   //     event.preventDefault();
   // interacting with our getblogs endpoint
   fetch('http://127.0.0.1:3000/api/v1/message')
       .then((response) => response.json())
-      .then((blogs) => {
-          console.log(blogs)
-          blogs.data.forEach(blog => {
+      .then((message) => {
+          console.log(message)
+          message.data.forEach(message => {
               const row = document.createElement("tr")
               const titleCell = document.createElement("td")
               const descriptionCell = document.createElement("td")
              // const authorCell = document.createElement("td")
-              const imageUrlCell = document.createElement("td")
+              //const imageUrlCell = document.createElement("td")
               const actionsCell = document.createElement("td")
-              const deleteButton = document.createElement("button")
+              //const deleteButton = document.createElement("button")
               // assign values to the cells
-              titleCell.textContent = blog.username;
-              descriptionCell.textContent = blog.email;
-             // authorCell.textContent = blog.author;
-               imageUrlCell.textContent = blog.message;
+              titleCell.textContent = message.username;
+              descriptionCell.textContent = message.email;
+            
+               imageUrlCell.textContent = message.message;
               deleteButton.textContent = "Remove"
               actionsCell.appendChild(deleteButton)
               //append rows
@@ -44,18 +44,18 @@
               // append table body
               form.querySelector("tbody").appendChild(row)
                    deleteButton.addEventListener("click", () => {
-                      deteleBlog(blog._id)
+                      deteleBlog(id)
                    })
           })
       })
       .catch(err => alert(err))
-   async function deteleBlog(blogId) {
-     await fetch(`http://127.0.0.1:3000/api/v1/message/${blogId}`,
+   async function message(id) {
+     await fetch(`  ttp://localhost:3000/api/v1/message/${id}`,
           {
               method: "DELETE"
           })
       // console.log(blogId)
-      const blog = blogId
+      const message = id
           //.then((response) => response.json())
           // .then((response) => {
           //     return response.json
@@ -64,7 +64,7 @@
           //     //fuctionalities of deleting
           //     alert(data.message)
           // })
-          Promise.all(blog)
+          Promise.all(message)
           .then(() => {
               alert("message delete succesfully")
           })
